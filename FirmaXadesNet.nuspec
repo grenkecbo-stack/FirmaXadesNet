@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>FirmaXadesNet.Compilado</id>
+    <version>1.0.0</version>
+    <authors>ctt-gob-es</authors>
+    <owners>ctt-gob-es</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Build compilada de FirmaXadesNet desde el repo ctt-gob-es para uso interno.</description>
+    <tags>xades firma facturae</tags>
+  </metadata>
+  <files>
+    <!-- DLL principal -->
+    <file src="FirmaXadesNet\bin\Release\FirmaXadesNet.dll" target="lib\net35" />
+
+    <!-- Microsoft.Xades y BouncyCastle suelen salir de Library -->
+    <file src="Library\bin\Release\Microsoft.Xades.dll" target="lib\net35" />
+    <file src="Library\bin\Release\BouncyCastle.Crypto.dll" target="lib\net35" />
+
+    <!-- Proyectos auxiliares, si existen en la solución -->
+    <file src="FirmaXadesNet.Policy\bin\Release\FirmaXadesNet.Policy.dll" target="lib\net35" />
+    <file src="FirmaXadesNet.Utils\bin\Release\FirmaXadesNet.Utils.dll" target="lib\net35" />
+  </files>
+</package>
